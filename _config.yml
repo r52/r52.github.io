@@ -1,0 +1,57 @@
+### Site Settings ###
+title               : r52
+description         : >-                               # >- means to ignore newlines until "url:"
+                      C++ Developer
+
+url                 : ""                               # base hostname & protocol for your site (e.g. http://example.com)
+baseurl             : ""                               # subpath of your site (e.g. /blog) [IMPORTANT: use "" if your are hosting at https://username.github.io directly]
+repository          : r52/r52.github.io                # repository metadata on GitHub Pages [know more at https://help.github.com/en/articles/repository-metadata-on-github-pages]
+remote_theme        : YoussefRaafatNasry/portfolYOU    # uncomment this if you are using it as a remote theme
+
+### Author Info ###
+author:
+  name              : r52
+  image             : https://ui-avatars.com/api/?name=R&length=1&size=512&background=c62828&color=fff
+  github            : r52
+
+
+### Pagination ###
+paginate: 6
+paginate_path: "/articles/page-:num/"
+
+
+### Posts Permalink ###
+permalink: articles/:title
+
+
+### Collections ###
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name
+  misc_projects:
+    output: true
+    permalink: /misc_projects/:name
+
+
+### Defaults for collections ###
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "page"
+  - scope:
+      path: "misc_projects"
+      type: "misc_projects"
+    values:
+      layout: "page"
+
+
+### Exclude from processing ###
+exclude:
+- README.md
+- CONTRIBUTING.md
+- LICENSE
+- Gemfile
+- Gemfile.lock
